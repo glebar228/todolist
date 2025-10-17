@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.card {
+    width: 300px;
+    padding: 10px;
+    border-radius: 4px;
+    filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.099));
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(199, 200, 201);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: animFed .6s forwards;
+}
+
+@keyframes animFed {
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#btnadd {
+    padding: 3px;
+    background-color: rgb(15, 158, 8);
+    color: aliceblue;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.searchbg {
+    margin-top: 20px;
+}
+
+
+/* todolist */
+
+.todolist {
+    background-color: #1e1546;
+    display: flex;
+    flex-direction: column;
+    filter: drop-shadow(0 3px 3px rgb(239, 141, 141));
+    padding: 20px;
+    border-radius: 4px;
+    row-gap: 10px;
+    align-items: center;
+
+}
+
+.head {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif ;
+    text-shadow: 0 3px 3px red;
+}
+
+.centerinp {
+    display: flex;
+    column-gap: 5px;
+    border-radius: 4px;
+}
+
+.inputval {
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+#btnlist {
+    border: none;
+    padding: 0 6px;
+    border-radius: 4px;
+    background-color: green;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+
+#btnlist:hover {
+    background-color: rgb(23, 165, 70);
+    transition: all .3s;
+}
+
+.listed {
+    margin-top: 10px;
+    display: flex;
+    max-height: 130px;
+    flex-direction: column;
+    width: 100%;
+    row-gap: 4px;
+    overflow: auto;
+}
+
+
+
+.lilist {
+    transform: all .6s ease;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 4px;
+    border-radius: 4px;
+}
+
+
+@keyframes liDel {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.lilist.opacity {
+    opacity: 0.3;
+}
+
+.textspan {
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #292828;
+}
+
+.textspan.active {
+    text-decoration: line-through red 1.5px;
+}
+
+.btnclose {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: red;
+    transition: all .3s ease-in-out;
+}
+
+.btnclose:hover {
+    transform: rotate(90deg);
+}
+
